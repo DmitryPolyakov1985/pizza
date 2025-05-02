@@ -23,18 +23,18 @@ export const fetchAddress = createAsyncThunk(
 
     // 3) Then we return an object with the data that we are interested in
     // Payload of the fulfilled state
+    console.log('position ', position);
+    console.log('address ', address);
     return { position, address };
   },
 );
 
 const initialState = {
-  username: "",
-  status: "idle",
-  error: "",
-  position: {
-    address: "",
-    error: "",
-  },
+  username: '',
+  status: 'idle',
+  position: {},
+  address: '',
+  error: '',
 };
 
 const userSlice = createSlice({
